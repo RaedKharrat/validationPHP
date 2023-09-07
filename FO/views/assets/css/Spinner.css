@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Sacramento:400|Montserrat:700);
+[role="progressbar"] {
+  position: relative;
+}
+[role="progressbar"] p {
+  display: block;
+  margin: 0;
+  height: 60px;
+  font-family: Sacramento, cursive;
+  font-size: 3em;
+  text-align: center;
+}
+[role="progressbar"]::before, [role="progressbar"]::after {
+  display: block;
+  height: 120px;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 6em;
+  text-transform: uppercase;
+  content: attr(data-text);
+}
+[role="progressbar"]::before {
+  color: #49311c;
+}
+[role="progressbar"]::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  color: white;
+  overflow: hidden;
+}
+
+[role="progressbar"][aria-busy="true"]::after {
+  -webkit-animation: load ease-out 10s infinite forwards;
+          animation: load ease-out 10s infinite forwards;
+}
+
+@-webkit-keyframes load {
+  0%, 10%, 100% {
+    height: 0;
+  }
+  90% {
+    height: 120px;
+  }
+}
+
+@keyframes load {
+  0%, 10%, 100% {
+    height: 0;
+  }
+  90% {
+    height: 120px;
+  }
+}

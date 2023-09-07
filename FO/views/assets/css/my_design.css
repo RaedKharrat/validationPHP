@@ -1,0 +1,31 @@
+/*stars*/
+
+/*change taille font*/
+.ratings {
+  font-size: 2em;
+}
+
+/*animation*/
+.ratings span{
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+
+.ratings span:hover ~ span,
+.ratings span:focus ~ span,
+.ratings span:hover,
+.ratings span:focus{
+  color: #28a745;
+  cursor: pointer;
+}
+
+/*shop*/
+.tab-pane{
+  width: 100%;
+}
+
+.tab-content{
+  width: 100%;
+}
